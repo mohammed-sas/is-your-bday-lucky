@@ -6,6 +6,10 @@ const para = document.querySelector("#paragraph-result");
 para.style.display="none";
 checkBtn.addEventListener("click",function(){
     let dobValue = parseInt(dob.value.replaceAll("-",""));
+    if(luckyNum.value <0){
+        alert('Enter lucky number 0 or greater than 0');
+        return
+    }
     checkBirthdateIsLucky(dobValue,luckyNum.value);
     
 });
